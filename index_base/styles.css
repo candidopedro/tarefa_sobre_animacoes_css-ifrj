@@ -1,36 +1,45 @@
+/* Cor de fundo da página */
 body {
     background-color: bisque;
 }
 
+/* Título principal centralizado */
 h1 {
     color: black;
     text-align: center;
 }
 
-h2 {
-    text-align: center;
+/* Centralização das formas SVG */
+svg {
+    display: block;
+    margin: 0 auto;
 }
 
+/* Estilo base para todas as formas com transição suave */
 .quadrado, .circulo, .triangulo, .hexagono {
     transition: transform 0.5s ease, fill 0.5s ease;
-    transform-origin: center;
+    transform-origin: center; /* Origem da transformação no centro da forma */
 }
 
+/* Animação do quadrado: rotação + aumento + mudança de cor */
 .quadrado:hover {
     transform: rotate(45deg) scale(1.2);
     fill: orange;
 }
 
+/* Animação do círculo: aumento de tamanho + mudança de cor */
 .circulo:hover {
     transform: scale(1.5);
     fill: lightgreen;
 }
 
+/* Animação do triângulo: movimento vertical + mudança de cor */
 .triangulo:hover {
     transform: translateY(-10px);
     fill: violet;
 }
 
+/* Animação do hexágono: rotação completa + mudança de cor */
 .hexagono:hover {
     transform: rotate(360deg);
     fill: gold;
